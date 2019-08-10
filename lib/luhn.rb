@@ -3,7 +3,7 @@ module Luhn
     num1 = number.to_s.reverse
     num2 = num1.split("").map { |x| x.to_i }
     num2.length.times do |n|
-      if n.odd?
+      if num2[n].odd?
         num2[n] *= 2
         if num2[n] > 9
           num2[n] -= 9
@@ -19,3 +19,4 @@ module Luhn
   end
 end
 
+Luhn.is_valid?(4194560385008504)
