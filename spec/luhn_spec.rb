@@ -15,7 +15,7 @@ RSpec.describe Luhn, type: :model do
     end
 
     it 'should return false if the number is not valid and the number has an odd number of digits' do 
-      expect(Luhn.is_valid?(377681478627336)).to be false
+      expect(Luhn.is_valid?(377681478627337)).to be false
     end
   end
 end
